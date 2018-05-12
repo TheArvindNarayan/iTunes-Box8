@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { FilerPipe } from './filer.pipe';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -20,10 +22,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilerPipe
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,

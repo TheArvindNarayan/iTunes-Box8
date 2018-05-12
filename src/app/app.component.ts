@@ -31,6 +31,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   title: any;
   titleURI: any;
   state = 'none';
+  searchText: any;
   constructor(private getdata: GetDataService) {
   }
 

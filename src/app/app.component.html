@@ -5,13 +5,14 @@
       {{title}}
     </a>
   </h2>
+  <input name="title" [(ngModel)]="searchText" class="search" type="search" placeholder="Search for albums" aria-label="Search for albums">
 </mat-toolbar>
 
 <div class="contents">
   <div class="container">
     <div class="album"
     [style.backgroundImage]="'url('+ post['im:image'][2]?.label +')'" 
-    *ngFor="let post of posts">
+    *ngFor="let post of posts | filer : searchText">
       <a href="{{post?.link.attributes.href}}">
           <div class="tint">
               <div class="detail">
