@@ -9,11 +9,13 @@
 
 <div class="contents">
   <div class="container">
-    <div class="album" [style.backgroundImage]="'url('+ post['im:image'][2]?.label +')'" *ngFor="let post of posts">
+    <div class="album"
+    [style.backgroundImage]="'url('+ post['im:image'][2]?.label +')'" 
+    *ngFor="let post of posts">
       <a href="{{post?.link.attributes.href}}">
           <div class="tint">
               <div class="detail">
-                <div class="title">
+                <div class="a-title">
                   {{ post.title.label | slice:0:20 }} ...
                 </div>
                 <span>

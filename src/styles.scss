@@ -110,3 +110,19 @@ a{
     opacity: 0;
   }
 }
+
+.a-title {
+  margin-bottom: 1em;
+  font-size: 1.25em;
+}
+
+.tint:hover {
+  background: linear-gradient(317deg, rgba(47,54,223,0.5) 0%, rgba(155,69,172,0.5) 36%, rgba(248,81,128,0.5) 91%) !important;
+  border-radius: .3em;
+}
+
+.album:hover {
+  transform: scale(1.05) translateY(-5%);
+  box-shadow: 0px 6px 20px 0px #b9b9b985;
+  border-radius: .3em;
+}
