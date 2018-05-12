@@ -4,7 +4,11 @@
 
 .mat-toolbar {
   border-bottom: .5px solid #ffffffbf;
-  background-color: #000000
+  background-color: #000000;
+  position: fixed;
+  width: 100vw;
+  margin: -.5em;
+  z-index: 999;
 }
 
 .title {
@@ -17,6 +21,7 @@
 .contents {
   min-height: 100vh;
   padding: 2em;
+  padding-top: 6em;
   .container {
     display: flex;
     flex-direction: row;
@@ -61,14 +66,29 @@
   color: #fff;
   border: 2px solid #545454;
   padding: 1em;
-  border-radius: 1em;
+  width: 100%;
+  border-radius: .5em;
   max-height: 1.5em;
   transition: .35s ease-in;
 }
 
 .search:focus {
   outline: none;
+  border-radius: 1em;
   border: 2px solid #ecececee;
   transform: scale(1.05);
-  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .title {
+    display: none;
+  }
+  .search {
+    margin: 0 1em;
+  }
+  .album, .tint {
+    width: 260px !important;
+    height: 260px !important;
+  }
 }

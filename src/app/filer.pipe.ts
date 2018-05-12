@@ -12,5 +12,5 @@ export class FilerPipe implements PipeTransform {
     }
     return posts.filter(item => item.title.label.toLowerCase().indexOf(filter.toString().toLowerCase()) !== -1);
 
-
+  }
 }
